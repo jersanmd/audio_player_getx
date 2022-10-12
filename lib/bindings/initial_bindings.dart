@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 class InitialBindings implements Bindings {
   @override
   void dependencies() {
-    Get.put(AudioHandler);
+    // Get.put(AudioHandler);
     Get.put(AlgoliaPlaylistController());
     Get.put(PageManager());
   }

@@ -1,4 +1,5 @@
 import 'package:audio_player_getx/services/algolia_playlist_controller.dart';
+import 'package:audio_player_getx/services/audio_handler.dart';
 import 'package:audio_player_getx/states/button_state.dart';
 import 'package:audio_player_getx/states/progress_bar_state.dart';
 import 'package:audio_player_getx/states/repeat_state.dart';
@@ -18,7 +19,7 @@ class PageManager extends RxController {
   var repeatButton = RepeatState.off.obs;
   var playButtonNotifier = ButtonState.paused.obs;
 
-  final _audioHandler = Get.find<AudioHandler>();
+  final _audioHandler = MyAudioHandler();
 
   // Controllers
   final AlgoliaPlaylistController _algoliaPlaylistController =

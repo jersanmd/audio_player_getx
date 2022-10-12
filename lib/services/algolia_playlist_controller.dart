@@ -21,4 +21,11 @@ class AlgoliaPlaylistController extends RxController {
     AlgoliaQuerySnapshot snapshot = await algoliaQuery.getObjects();
     audioResultSermons.value = snapshot.hits;
   }
+
+  @override
+  void onReady() {
+    // TODO: implement onReady
+    super.onReady();
+    getSearchResultMusic();
+  }
 }
